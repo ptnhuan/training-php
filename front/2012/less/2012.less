@@ -1,0 +1,157 @@
+@import "../../variables/var.less";
+    
+.type-2012 {
+    background-color: @background-color-gray;
+    font-family: @font-name-arial;
+    
+    .latest-news {
+        margin: 50px 0px 0px 0px;
+        .news-content {
+            margin: 0px 0px 30px 0px;
+            float: left;
+            width: 100%;
+            .thumb {
+                background-color: @background-color-green;
+                float: left;
+                margin: 0px 30px 0px 0px;
+                a {
+                    text-decoration: none;
+                }
+                img {
+                    -webkit-transition: all 0.3s ease-in-out;
+                    height: auto;
+                    width: @font-size-article-image-width;
+                    vertical-align: middle;
+                    border: 0;
+                }
+            }
+            .thumb:hover img {
+                opacity: 0.5;
+                -webkit-transition: all 0.3s ease-in-out;
+            }
+            .text {
+                p {
+                    @style-description;
+                    text-align: justify;
+                    line-height: 20px;
+                }
+                a {
+                    text-decoration: none;
+                }
+                h2 {
+                    line-height: 24px;
+                    font-weight: normal;
+                    margin: 0px;
+                }
+                .data-tags {
+                    margin: 10px 0px;
+                    p {
+                        color: @font-color-gray-2;
+                        margin: 0px 10px 0px 0px;
+                        font: @font-size-heading-6 @font-name-arial;
+                        display: inline-block;
+                    }
+                    a {
+                        font: @font-size-heading-6 @font-name-arial;
+                        color: @font-color-gray-4;
+                        position: relative !important;
+                        padding: 0px 0px 0px 15px;
+                        margin: 0px 3px 0px 0px;
+                    }
+                    a:hover {
+                        color: @font-color-green;
+                    }
+                    a:before {
+                        content: "";
+                        height: 6px;
+                        width: 6px;
+                        border-radius: 10px;
+                        position: absolute;
+                        left: 0px;
+                        top: 50%;
+                        margin-top: -3px;
+                        background: @background-color-green;
+                    }
+                }
+                .btn-style {
+                @link-read-more;
+                    text-transform: uppercase;
+                    -webkit-transition: all 0.3s ease-in-out;
+                    display: inline-block;
+                    border-radius: 5px;
+                    padding: 10px 20px;
+                    border: none;
+                }
+                .btn-style:hover {
+                @link-read-more-hover;
+                }
+            }
+        }
+    }
+    
+    .pagination {
+        margin: 20px 0;
+        float: left;
+        width: 100%;
+        ul {
+            display: inline-block;
+            border-radius: 4px;
+            padding: 0;
+            margin: 0;
+        }
+        ul > li {
+            display: inline;
+        }
+        li {
+            line-height: 20px;
+        }
+        ul > li:first-child > a {
+            border-left-width: 1px;
+        }
+        ul > li > a {
+            float: left;
+            padding: 4px 12px;
+            line-height: 20px;
+            text-decoration: none;
+            @style-pagination;
+            border: 1px solid @font-color-gray-1;
+        }
+        ul > li > a:hover {
+            color: @font-color-white;
+            background-color: @background-color-green;
+        }
+    }
+
+     @media (min-width: @sm-768){
+        .text h2{
+            @style-title-page;
+        }
+     }
+    @media (max-width: @sm-768) {
+        .news-content h2 {
+            font: @font-size-heading-4 @font-name-arial;
+        }
+        .news-content .data-tags{
+            margin-top: 0 !important;
+        }
+    }
+    @media (max-width: @sm-768) and (min-width: @xs-480) {
+        .news-content .thumb {
+            width: 40%;
+        }
+    }
+    @media (max-width: @xs-480 - 1) {
+        .news-content .thumb {
+            margin: 0 !important;
+        }
+        .text .data-tags{
+            display: grid;
+            padding-top: 5px;
+        }
+    }
+    @media (max-width: @md-992) and (min-width: @xs-480) {
+        .data-tags a {
+            display: flex;
+        }
+    }
+}
