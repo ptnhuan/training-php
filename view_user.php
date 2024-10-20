@@ -1,4 +1,13 @@
 <?php
+
+require_once "helper/Helper.php";
+$helper = new Helper();
+
+if (!$helper->isAuth()) {
+    header('location: login.php');
+}
+
+
 require_once 'models/UserModel.php';
 $userModel = new UserModel();
 

@@ -65,7 +65,6 @@ if (!empty($_POST['submit'])) {
                             <!-- Button -->
                             <div class="col-sm-12 controls">
                                 <button type="submit" name="submit" value="submit" class="btn btn-primary">Submit</button>
-                                <a id="btn-fblogin" href="#" class="btn btn-primary">Login with Facebook</a>
                             </div>
                         </div>
 

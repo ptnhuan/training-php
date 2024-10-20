@@ -1,4 +1,12 @@
 <?php
+
+require_once "helper/Helper.php";
+$helper = new Helper();
+
+if (!$helper->isAuth()) {
+    header('location: login.php');
+}
+
 // Start the session
 session_start();
 
