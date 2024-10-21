@@ -1,6 +1,12 @@
 <?php
-// Start the session
-session_start();
+require_once "helper/Helper.php";
+$helper = new Helper();
+
+if ($helper->isAuth()) {
+    header('location: list_users.php');
+    exit();
+}
+
 
 require_once 'models/UserModel.php';
 $userModel = new UserModel();
