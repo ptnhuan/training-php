@@ -34,7 +34,7 @@ if (!empty($_POST['submit'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>User form</title>
+    <title>Profile user</title>
     <?php include 'views/meta.php' ?>
 </head>
 <body>

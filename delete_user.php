@@ -19,3 +19,12 @@ if (!empty($_GET['id'])) {
 }
 header('location: list_users.php');
 ?>
+<html>
+<head>
+    <title>Delete user</title>
+</head>
+<body>
+</body>
+</html>
+
+

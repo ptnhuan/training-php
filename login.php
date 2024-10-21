@@ -29,7 +29,7 @@ if (!empty($_POST['submit'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>User form</title>
+    <title>Login</title>
     <?php include 'views/meta.php' ?>
 </head>
 <body>
