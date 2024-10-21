@@ -5,6 +5,7 @@ $helper = new Helper();
 
 if (!$helper->isAuth()) {
     header('location: login.php');
+    exit();
 }
 
 require_once 'models/UserModel.php';
@@ -18,6 +19,7 @@ if (!empty($_GET['id'])) {
     $userModel->deleteUserById($id);//Delete existing user
 }
 header('location: list_users.php');
+exit();
 ?>
 <html>
 <head>

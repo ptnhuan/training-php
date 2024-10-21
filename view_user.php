@@ -5,6 +5,7 @@ $helper = new Helper();
 
 if (!$helper->isAuth()) {
     header('location: login.php');
+    exit();
 }
 
 
@@ -28,6 +29,7 @@ if (!empty($_POST['submit'])) {
         $userModel->insertUser($_POST);
     }
     header('location: list_users.php');
+    exit();
 }
 
 ?>

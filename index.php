@@ -4,6 +4,8 @@ $helper = new Helper();
 
 if ($helper->isAuth()) {
     header('location: list_users.php');
+    exit();
 } else {
     header('location: login.php');
+    exit();
 }

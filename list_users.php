@@ -5,8 +5,8 @@ $helper = new Helper();
 
 if (!$helper->isAuth()) {
     header('location: login.php');
+    exit();
 }
-
 require_once 'models/UserModel.php';
 $userModel = new UserModel();
 

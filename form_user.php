@@ -5,6 +5,7 @@ $helper = new Helper();
 
 if (!$helper->isAuth()) {
     header('location: login.php');
+    exit();
 }
 
 require_once 'models/UserModel.php';
@@ -27,6 +28,7 @@ if (!empty($_POST['submit'])) {
         $userModel->insertUser($_POST);
     }
     header('location: list_users.php');
+    exit();
 }
 
 ?>
